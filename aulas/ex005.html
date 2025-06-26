@@ -6,7 +6,7 @@
     <title>Document</title>
     <style>
         body{
-            background-color: rgb(56, 66, 160);
+            background: rgb(56, 66, 160);
             color: white;
             font: normal 10pt Arial;
         }
@@ -17,10 +17,26 @@
     <h1>Iniciando estudos DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
-    <div>Clique em mim</div>
+    <div id="msg" background="green">Clique em mim</div>
+    <div id="msg2">Clique de novo</div>
 
     <script>
-        
+        window.document.write(window.document.URL)
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write(`<br>Está escrito assim: ${p1.innerText}`)
+        p1.style.color = 'red'
+
+        var p2 = window.document.getElementsByName('p')[1]
+        document.write(`<br>${p2.innerText}`)
+
+        var div = window.document.getElementById('msg')
+        div.style.background = 'green'
+
+        var div2 = window.document.getElementsByClassName('msg2')[0]
+        div2.innerText = 'Olá'
+
+        var div3 = window.document.querySelector('div#msg')[0]
+        div3.style.background = 'green'
     </script>
 </body>
 </html>
