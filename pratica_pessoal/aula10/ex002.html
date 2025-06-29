@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando</title>
+</head>
+<body>
+    <h1>Digite números para somar!</h1>
+    <input type="number" name="numero1" id="numero1">
+    +
+    <input type="number" name="numero2" id="numero2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="result">Resultado...</div>
+
+    <script>
+        function somar() {
+            var texton1 = document.querySelector('input#numero1')
+            var texton2 = document.querySelector('input#numero2')
+            var numero1 = Number(texton1.value)
+            var numero2 = Number(texton2.value)
+            soma = numero1+numero2
+            document.querySelector('div#result').innerHTML = `A soma ${numero1} + ${numero2} = ${soma}`
+        }
+    </script>
+</body>
+</html>

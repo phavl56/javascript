@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual é maior?</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+        div#numero1{
+            background-color: blue;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+        }
+        div#numero2{
+            background-color: red;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Qual dos dois números é maior?</h1>
+    <div id="numero1">XX</div>
+    <div id="numero2">XX</div>
+    <p id="result">Aguardando...</p>
+
+    <script>
+        textonumero1 = document.querySelector('div#numero1') 
+        textonumero2 = document.querySelector('div#numero2')
+        console.log(textonumero1)
+        textonumero1.innerText = '20'
+        textonumero2.innerText = '30'
+
+        textonumero1.addEventListener('click', clicoun1)
+        textonumero2.addEventListener('click', clicoun2)
+        
+        numero1 = Number(textonumero1.innerText)
+        numero2 = Number(textonumero2.innerText)
+
+        result = document.querySelector('p#result')
+
+        function clicoun1() {
+            if (numero1 > numero2) {
+                result.innerText = "Você acertou!"
+            }
+            else {
+                result.innerText = "Você errou!"
+            }
+        }
+
+        function clicoun2() {
+            if (numero2 > numero1) {
+                result.innerText = "Você acertou!"
+            }
+            else {
+                result.innerText = "Você errou!"
+            }
+        }
+
+
+        
+    </script>
+</body>
+</html>

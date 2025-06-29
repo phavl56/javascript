@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are you Brazillian?</title>
+</head>
+<body>
+    <h1>What country were you born?</h1>
+    Country: <input type="text" name="country" id="country">
+    <input type="button" value="Verify" onclick="verify()">
+    <p id="result">Result...</p>
+    <script>
+        function verify() {
+            country_input = window.document.querySelector('input#country')
+            country = country_input.value.toUpperCase()
+            result = window.document.querySelector('p#result')
+            if (country == 'BRAZIL' || country == 'BRASIL') {
+                result.innerHTML = `Você é <strong>BRASILEIRO</strong>`
+            }
+            else {
+                result.innerHTML = `You're <strong>FOREIGN</strong>`
+            }
+        }
+    </script>
+</body>
+</html>
